@@ -20,10 +20,13 @@ DATA: 03/03/2011
 Fazer o teste com as tres solucoes.
 
 
-Reimplementar o design (projeto) usado no KEMS
+3) Reimplementar o design (projeto) usado no KEMS
  - https://github.com/adolfont/KEMS/tree/master/kems.prover/src/logic/formulas
   (copiar e colar o que for possível)
 
+4) Implementar FormulaFactory
+
+Usa padrao Factory: http://en.wikipedia.org/wiki/Factory_method_pattern
 
 Exemplo de uso de FormulaFactory
 l.130 de 
