@@ -27,7 +27,7 @@ public class conectivo implements IConectivo {
 
 	@Override
 	public void addFormula(IFormula formula) {
-		//desta forma só cria a linked list caso existam subformulas - economia de memória
+		//desta forma so cria a linked list caso existam subformulas - economia de memoria
 		if (_listaFormulas == null) _listaFormulas = new LinkedList<IFormula>();
 		_listaFormulas.add(formula);
 	}
