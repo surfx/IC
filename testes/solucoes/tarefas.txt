@@ -1,5 +1,8 @@
 TAREFAS
 
+
+DATA: 03/03/2011
+
 1) Remover caracteres incorretos (para não prejudicar visualizacao).
 
 2) Escrever testes automatizados:
