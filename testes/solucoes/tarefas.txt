@@ -1,0 +1,34 @@
+TAREFAS
+
+1) Remover caracteres incorretos (para não prejudicar visualizacao).
+
+2) Escrever testes automatizados:
+- criar uma quantidade X de fórmulas
+    - atomicas
+    - compostas
+       - de complexidade crescente: 2, 3, ate 100
+- Contar memoria usada
+- Contar tempo gasto na criacao das formulas
+
+	Formula f1 = new AtomicFormula("p");
+
+	Formula f2 = new CompositeFormula(AND, f1, f1);
+
+Fazer o teste com as tres solucoes.
+
+
+Reimplementar o design (projeto) usado no KEMS
+ - https://github.com/adolfont/KEMS/tree/master/kems.prover/src/logic/formulas
+  (copiar e colar o que for possível)
+
+
+Exemplo de uso de FormulaFactory
+l.130 de 
+
+https://github.com/adolfont/KEMS/blob/master/kems.bin/exec/analysers/input/satlib-sat-lfi-inconsdef/satlib-sat-lfi-inconsdef.cup
+
+ ff.createCompositeFormula (connective, (Formula) (l.get(0)), (Formula) (l.get(1)) );
+
+
+
+
