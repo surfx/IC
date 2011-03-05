@@ -5,7 +5,7 @@ import conectivos.IConectivo;
 /**
  * Representa uma fórmula composta
  * */
-public class formulaComposta implements IFormulaComposta {
+public class FormulaComposta implements IFormulaComposta {
 	
 	private IConectivo _iconectivo; 
 	
@@ -22,11 +22,11 @@ public class formulaComposta implements IFormulaComposta {
 		_iconectivo = conectivo;
 	}
 	
-	public formulaComposta(){
+	public FormulaComposta(){
 		
 	}
 
-	public formulaComposta(IConectivo conectivo){
+	public FormulaComposta(IConectivo conectivo){
 		setConectivo(conectivo);
 	}
 

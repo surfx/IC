@@ -3,7 +3,7 @@ package formulas;
 import conectivos.IConectivo;
 
 /**
- * Interface de uma fórmula composta
+ * Interface de uma formula composta
  * */
 public interface IFormulaComposta extends IFormula {
 	public void setConectivo(IConectivo conectivo);

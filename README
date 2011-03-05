@@ -1,3 +1,41 @@
-Experimentos realizados durante o projeto de Iniciação Científica
+﻿Experimentos realizados durante o projeto de Iniciação Científica
+
+Soluções criadas com o objetivo de representar uma fórmula lógica proposicional através da linguagem Java, objetivando-se o baixo consumo de memória e eficiência computacional.
+Sendo que Uma fórmula pode ser uma fórmula atômica ou uma fórmula composta.
+
+Toda fórmula atômica possui um identificador.
+Toda fórmula composta tem um conectivo e zero ou mais subfórmulas.
+
+Todo conectivo tem uma aridade (um número inteiro maior ou igual a 0).
+Numa fórmula composta, a aridade do conectivo determina a quantidade de subfórmulas. Isto é, se numa fórmula composta o conectivo tem aridade 3, esta fórmula terá três subfórmulas.
+
+Exs.:
+
+A&B 
+conectivo: &   aridade:2 
+subfórmulas: A, B
+
+
+A&(B&C)
+conectivo: & aridade:2 
+subfórmulas: A, B&C
+
+!A
+conectivo:!  aridade:1
+subfórmulas: A
+
+TOP
+conectivo: TOP aridade:0
+subfórmulas: 0
+
+Conectivos usados no KEMS:
+Zero-ários
+TOP (veracidade), BOTTOM (falsidade)
+Unários:
+! (negação, não), @ (consistência), * (inconsistência)
+Binários:
+& (conjunção, e) , | (disjunção, ou), -> (implicação; se, então)
+
+
 
 

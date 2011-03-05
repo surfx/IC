@@ -1,9 +1,9 @@
 package formulas;
 
 /**
- * Representa uma fórmula atômica
+ * Representa uma formula atomica
  * */
-public class formulaAtomica implements IFormulaAtomica {
+public class FormulaAtomica implements IFormulaAtomica {
 
 	private String _identificador;
 	
@@ -20,7 +20,7 @@ public class formulaAtomica implements IFormulaAtomica {
 		return _identificador;
 	}
 	
-	public formulaAtomica(String identificador){
+	public FormulaAtomica(String identificador){
 		setIdentificador(identificador);
 	}
 	

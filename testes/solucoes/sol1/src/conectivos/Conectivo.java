@@ -5,9 +5,9 @@ import java.util.LinkedList;
 import formulas.IFormula;
 
 /**
- * Respresenta um conectivo
+ * Representa um conectivo
  * */
-public class conectivo implements IConectivo {
+public class Conectivo implements IConectivo {
 	private String _identificador;
 	private LinkedList<IFormula> _listaFormulas = null;
 	
@@ -37,7 +37,7 @@ public class conectivo implements IConectivo {
 		return _listaFormulas;
 	}
 	
-	public conectivo(String identificador){
+	public Conectivo(String identificador){
 		setIdentificador(identificador);
 	}
 
