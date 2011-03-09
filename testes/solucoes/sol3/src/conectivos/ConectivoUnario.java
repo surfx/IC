@@ -4,7 +4,7 @@ import enuns.ClsEnuns.TipoConectivo;
 import formulas.IFormula;
 
 public class ConectivoUnario implements IConectivoUnario {
-	private String _identificador;
+	private short _identificador;
 	private IFormula _formula;
 	
 	@Override
@@ -17,11 +17,11 @@ public class ConectivoUnario implements IConectivoUnario {
 	}
 	
 	@Override
-	public void setIdentificador(String identificador) {
+	public void setIdentificador(short identificador) {
 		_identificador = identificador;
 	}
 	@Override
-	public String getIdentificador() {
+	public short getIdentificador() {
 		return _identificador;
 	}
 	
@@ -35,12 +35,12 @@ public class ConectivoUnario implements IConectivoUnario {
 		_formula = formula;
 	}
 	
-	public ConectivoUnario(String identificador){
+	public ConectivoUnario(short identificador){
 		setIdentificador(identificador);
 		setFormula(null);
 	}
 
-	public ConectivoUnario(String identificador, IFormula formula){
+	public ConectivoUnario(short identificador, IFormula formula){
 		setIdentificador(identificador);
 		setFormula(formula);
 	}

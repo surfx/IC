@@ -6,7 +6,7 @@ import enuns.ClsEnuns.TipoConectivo;
  * Representa um ConectivoZeroario
  * */
 public class ConectivoZeroario implements IConectivo {
-	private String _identificador;
+	private short _identificador;
 	
 	@Override
 	public int getAridade() {
@@ -18,15 +18,15 @@ public class ConectivoZeroario implements IConectivo {
 	}
 	
 	@Override
-	public void setIdentificador(String identificador) {
+	public void setIdentificador(short identificador) {
 		_identificador = identificador;
 	}
 	@Override
-	public String getIdentificador() {
+	public short getIdentificador() {
 		return _identificador;
 	}
 	
-	public ConectivoZeroario(String identificador){
+	public ConectivoZeroario(short identificador){
 		setIdentificador(identificador);
 	}
 

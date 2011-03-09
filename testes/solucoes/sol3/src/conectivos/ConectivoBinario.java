@@ -4,7 +4,7 @@ import enuns.ClsEnuns.TipoConectivo;
 import formulas.IFormula;
 
 public class ConectivoBinario implements IConectivoBinario {
-	private String _identificador;
+	private short _identificador;
 	private IFormula _formulaDireita;
 	private IFormula _formulaEsquerda;
 	
@@ -18,11 +18,11 @@ public class ConectivoBinario implements IConectivoBinario {
 	}
 	
 	@Override
-	public void setIdentificador(String identificador) {
+	public void setIdentificador(short identificador) {
 		_identificador = identificador;
 	}
 	@Override
-	public String getIdentificador() {
+	public short getIdentificador() {
 		return _identificador;
 	}
 
@@ -46,12 +46,12 @@ public class ConectivoBinario implements IConectivoBinario {
 		_formulaEsquerda = formula;
 	}
 
-	public ConectivoBinario(String identificador){
+	public ConectivoBinario(short identificador){
 		setIdentificador(identificador);
 		setFormulaEsquerda(null);
 		setFormulaDireita(null);
 	}
-	public ConectivoBinario(String identificador, IFormula formulaEsquerda, IFormula formulaDireita){
+	public ConectivoBinario(short identificador, IFormula formulaEsquerda, IFormula formulaDireita){
 		setIdentificador(identificador);
 		setFormulaEsquerda(formulaEsquerda);
 		setFormulaDireita(formulaDireita);

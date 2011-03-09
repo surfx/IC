@@ -2,6 +2,7 @@ import conectivos.ConectivoBinario;
 import conectivos.ConectivoUnario;
 import conectivos.ConectivoZeroario;
 import conectivos.IConectivo;
+import enuns.ClsEnuns.TipoConectivo;
 import formulas.FormulaAtomica;
 import formulas.FormulaComposta;
 import formulas.IFormula;
@@ -34,14 +35,23 @@ public class main {
 //		IFormulaComposta fComposta = new FormulaComposta(cB);
 //		IConectivo cB2 = new ConectivoBinario("||", fComposta, fComposta);
 //		IFormulaComposta fComposta2 = new FormulaComposta(cB2);
+/*		
+		//Factory
+		FormulaAtomica fa = FormulaFactory.getFormula("A1");
+		//fa: 0 - A1
+		System.out.println("fa: " + fa.getIdentificador() + " - " +  FormulaFactory.getIdentificador(fa.getIdentificador()));
 		
+		FormulaComposta fc = FormulaFactory.getFormulaComposta((ConectivoBinario) FormulaFactory.getConectivo(TipoConectivo.binario, "||"), fa, fa);
+	    //fc: 1 - ||
+		System.out.println("fc: " + fc.getConectivo().getIdentificador() + " - " + FormulaFactory.getIdentificador(fc.getConectivo().getIdentificador()));
+*/
 		System.out.println("-(i)------------------------");
 		IFormula vet[] = new IFormula[1000000];
 		for (int i = 0; i < vet.length; i++){
 			if (i < 2){
-				vet[i] = new FormulaAtomica("A" + i);
+				vet[i] = FormulaFactory.getFormula("A" + i);
 			} else {
-				vet[i] = new FormulaComposta(new ConectivoBinario("||", vet[i-1], vet[i-2]));
+				vet[i] = FormulaFactory.getFormulaComposta((ConectivoBinario) FormulaFactory.getConectivo(TipoConectivo.binario, "||"), vet[i-1], vet[i-2]);
 			}
 		}
 		System.out.println("-(f)------------------------");

@@ -5,22 +5,22 @@ package formulas;
  * */
 public class FormulaAtomica implements IFormulaAtomica {
 
-	private String _identificador;
+	private short _identificador;
 	
 	@Override
 	public boolean isAtomic(){
 		return true; //melhor forma de se fazer isto ?
 	}
 	@Override
-	public void setIdentificador(String identificador) {
+	public void setIdentificador(short identificador) {
 		_identificador = identificador;
 	}
 	@Override
-	public String getIdentificador() {
+	public short getIdentificador() {
 		return _identificador;
 	}
 	
-	public FormulaAtomica(String identificador){
+	public FormulaAtomica(short identificador){
 		setIdentificador(identificador);
 	}
 	
