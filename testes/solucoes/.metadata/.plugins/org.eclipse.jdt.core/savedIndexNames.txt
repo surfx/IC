@@ -1,2 +1,0 @@
-INDEX VERSION 1.126+/home/adolfo/Documents/Software/IC/testes/solucoes/.metadata/.plugins/org.eclipse.jdt.core
-3567370591.index
