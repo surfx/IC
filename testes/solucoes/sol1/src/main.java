@@ -3,8 +3,6 @@ import conectivos.IConectivo;
 import formulas.FormulaAtomica;
 import formulas.FormulaComposta;
 import formulas.IFormula;
-import formulas.IFormulaAtomica;
-import formulas.IFormulaComposta;
 
 
 public class main {

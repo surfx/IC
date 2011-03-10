@@ -1,0 +1,12 @@
+import formulas.FormulaFactory;
+
+
+public class main {
+
+	public static void main(String[] args) {
+		
+		new FormulaFactory().createAtomicFormula("A");
+		
+	}
+
+}
