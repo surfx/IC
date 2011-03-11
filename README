@@ -39,3 +39,7 @@ Binários:
 
 
 
+
+
+A análise das soluções é feita através do software PERF, cujo comando é:
+perf stat java -jar ARQJAR.jar

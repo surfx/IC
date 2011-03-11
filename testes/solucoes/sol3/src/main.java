@@ -56,4 +56,20 @@ public class main {
 		}
 		System.out.println("-(f)------------------------");
 	}
+	
+	private static void criacaoFormulas(){
+		IFormula v[] = new IFormula[9];
+		v[0] = FormulaFactory.getFormula("A1");
+		v[1] = FormulaFactory.getFormula("A2");
+		v[2] = FormulaFactory.getFormulaComposta((ConectivoUnario)FormulaFactory.getConectivo(TipoConectivo.unario, "!"), v[0]); //!A1
+		v[3] = FormulaFactory.getFormulaComposta((ConectivoUnario)FormulaFactory.getConectivo(TipoConectivo.unario, "!"), FormulaFactory.getFormulaComposta((ConectivoUnario)FormulaFactory.getConectivo(TipoConectivo.unario,"!"), v[1])); //!!A2
+		v[4] = FormulaFactory.getFormulaComposta((ConectivoBinario)FormulaFactory.getConectivo(TipoConectivo.binario, "&"), v[0], v[1]); //A1&A2
+		v[5] = FormulaFactory.getFormulaComposta((ConectivoBinario)FormulaFactory.getConectivo(TipoConectivo.binario,"&"), v[2], v[1]); //!A1&A2
+		v[6] = FormulaFactory.getFormulaComposta((ConectivoBinario)FormulaFactory.getConectivo(TipoConectivo.binario,"||"), v[0], v[3]);//A1||!!A2
+		v[7] = FormulaFactory.getFormulaComposta((ConectivoBinario)FormulaFactory.getConectivo(TipoConectivo.binario,"->"), v[4], v[1]);//(A1&A2)->A2
+		
+		IFormula f1 = FormulaFactory.getFormulaComposta((ConectivoBinario)FormulaFactory.getConectivo(TipoConectivo.binario,"||"), v[2], FormulaFactory.getFormulaComposta((ConectivoUnario)FormulaFactory.getConectivo(TipoConectivo.unario, "!"), v[1]));
+		v[8] = FormulaFactory.getFormulaComposta((ConectivoBinario)FormulaFactory.getConectivo(TipoConectivo.binario,"->"), v[4], f1); //(A1&A2)->(!A1||!A2)
+	}
+	
 }
