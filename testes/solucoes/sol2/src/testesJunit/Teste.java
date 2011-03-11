@@ -16,7 +16,7 @@ import formulas.IFormulaAtomica;
 import formulas.IFormulaComposta;
 
 
-public class teste {
+public class Teste {
 	
 	@Test
 	public void teste1() {

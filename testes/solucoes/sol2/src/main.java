@@ -27,6 +27,7 @@ public class main {
 			} else {
 				vet[i] = new FormulaComposta(new ConectivoBinario("||", vet[i-1], vet[i-2]));
 			}
+			criacaoFormulas();
 		}
 		System.out.println("-(f)------------------------");
 	}

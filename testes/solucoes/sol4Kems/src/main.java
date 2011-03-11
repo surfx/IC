@@ -17,6 +17,7 @@ public class main {
 			} else {
 				vet[i] = ff.createCompositeFormula(c, vet[i-1], vet[i-2]);
 			}
+			criacaoFormulas();
 		}
 		System.out.println("-(f)------------------------");
 	}

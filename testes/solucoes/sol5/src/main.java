@@ -30,7 +30,9 @@ public class main {
 			} else {
 				vet[i] = new FormulaBinaria(Conectivo.AND, vet[i-1], vet[i-2]);
 			}
+			criacaoFormulas();
 		}
+		
 		System.out.println("-(f)------------------------");
 		
 	}

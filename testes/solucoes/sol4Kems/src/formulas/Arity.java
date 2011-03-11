@@ -11,10 +11,10 @@ package formulas;
  */
 public class Arity {
     
-    public static Arity UNARY = new Arity();
-    public static Arity BINARY = new Arity();
-    public static Arity ZEROARY = new Arity();
-    public static Arity NARY = new Arity();
+    public static final Arity UNARY = new Arity();
+    public static final Arity BINARY = new Arity();
+    public static final Arity ZEROARY = new Arity();
+    public static final Arity NARY = new Arity();
     
     private Arity() {
     }
