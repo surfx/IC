@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Created-By: Emerson Shigueo Sugimoto
+Main-Class: main
