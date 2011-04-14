@@ -19,17 +19,37 @@ public class main {
 //		IConectivo cB2 = new ConectivoBinario("||", fComposta, fComposta);
 //		IFormulaComposta fComposta2 = new FormulaComposta(cB2);
 		
+		int numFormulas = 1000000;
+		if (args.length > 0){
+			try {
+			numFormulas = Integer.parseInt(args[0]);
+			} catch(Exception e) {
+				numFormulas = 1000000;
+			}
+		}
+		
+		System.out.println("numFormulas: "+ numFormulas);
+	    double memoriaEmUso1 = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+		
 		System.out.println("-(i)------------------------");
-		IFormula vet[] = new IFormula[1000000];
+		IFormula vet[] = new IFormula[numFormulas];
 		for (int i = 0; i < vet.length; i++){
 			if (i < 2){
 				vet[i] = new FormulaAtomica("A" + i);
 			} else {
 				vet[i] = new FormulaComposta(new ConectivoBinario("||", vet[i-1], vet[i-2]));
 			}
-			criacaoFormulas();
+			//criacaoFormulas();
 		}
 		System.out.println("-(f)------------------------");
+		
+	    System.out.println("Total Memory: "+Runtime.getRuntime().totalMemory());    
+	    System.out.println("Free Memory: "+Runtime.getRuntime().freeMemory());
+		
+	    double memoriaEmUso2 = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+	    //System.out.println("memoriaEmUso2: "+memoriaEmUso2);
+	    System.out.println("memoriaUsada: "+ (memoriaEmUso2-memoriaEmUso1));
+		
 	}
 	
 	private static void criacaoFormulas(){

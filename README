@@ -38,8 +38,34 @@ Binários:
 
 
 
-
-
-
 A análise das soluções é feita através do software PERF, cujo comando é:
 perf stat java -jar ARQJAR.jar
+-------------------------------------------------------------------------------------
+
+Como criar um arquivo .jar através do compilador do java
+
+
+Passos: 
+1) Compilar o arquivo principal 'main.java', através do comando:
+	javac -cp . main.java
+Este comando ira gerar o arquivo 'main.class', que pode ser executado através do comando:
+	java main
+Através deste comando, pode-se adicionar o número de fórmulas que serão criadas, como por exemplo:
+	java main 50
+Neste caso 50 fórmulas serão criadas.
+
+2) Criar o arquivo 'manifest.mf'. Este arquivo conterá as informações relativas à classe que o arquivo .jar irá executar inicialmente. Sua estrutura base é:
+	Manifest-Version: 1.0
+	Created-By: Emerson Shigueo Sugimoto
+	Main-Class: main
+
+O 'Main-Class' contém a definição da classe que o arquivo .jar irá chamar em sua execução.
+
+3) Adicione o manifesto ao arquivo .jar criado através do comando:
+	jar cvfm nomeSolucao.jar manifest.mf *
+
+4) Para executar o arquivo .jar, basta usar o comando:
+	java -jar nomeSolucao.jar 
+Para adicionar o número de fórmulas à serem criadas pela solução, basta usar o comando:
+	java -jar nomeSolucao.jar 12
+Neste caso 12 fórmulas serão criadas.

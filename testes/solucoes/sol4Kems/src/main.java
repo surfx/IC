@@ -7,8 +7,21 @@ import formulas.FormulaFactory;
 public class main {
 
 	public static void main(String[] args) {
+		
+		int numFormulas = 1000000;
+		if (args.length > 0){
+			try {
+			numFormulas = Integer.parseInt(args[0]);
+			} catch(Exception e) {
+				numFormulas = 1000000;
+			}
+		}
+		
+		System.out.println("numFormulas: "+ numFormulas);
+	    double memoriaEmUso1 = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+		
 		System.out.println("-(i)------------------------");
-		Formula vet[] = new Formula[1000000];
+		Formula vet[] = new Formula[numFormulas];
 		FormulaFactory ff = new FormulaFactory();
 		Connective c= new Connective("&", Arity.BINARY);
 		for (int i = 0; i < vet.length; i++){
@@ -17,9 +30,17 @@ public class main {
 			} else {
 				vet[i] = ff.createCompositeFormula(c, vet[i-1], vet[i-2]);
 			}
-			criacaoFormulas();
+			//criacaoFormulas();
 		}
 		System.out.println("-(f)------------------------");
+		
+	    System.out.println("Total Memory: "+Runtime.getRuntime().totalMemory());    
+	    System.out.println("Free Memory: "+Runtime.getRuntime().freeMemory());
+		
+	    double memoriaEmUso2 = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+	    //System.out.println("memoriaEmUso2: "+memoriaEmUso2);
+	    System.out.println("memoriaUsada: "+ (memoriaEmUso2-memoriaEmUso1));
+		
 	}
 	private static void criacaoFormulas(){
 		Formula v[] = new Formula[9];
